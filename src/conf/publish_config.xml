@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config>
-	<apps default="favsoft" patchFolder="d:/favsoft/patchFolder">
-		<app appName="deltaRelease" patchFile="deltaReleaseFile.txt">
-			<patch_source_dir>
-				E:\work\simens\workspace\.metadata\.plugins\org.eclipse.wst.server.core\tmp2\webapps\DeltaRelease
-			</patch_source_dir>
-			<patch_dest_dir>
-				/opt/apache-tomcat-7.0.28/webapps/DeltaRelease
+	<apps outpatchFolder="C:\Users\patch_dest_dir" desc="输出主文件夹(绝对路径)">
+		<app appName="myapp" patchFile="releaseFile.txt" desc="项目名和修改列表">
+			<patch_dest_dir desc="输出子文件夹(相对路径)">
+				\myapp
 			</patch_dest_dir>
+			<patch_source_dir desc="源码根目录(绝对路径)">
+				C:\Users\SVN\myapp
+			</patch_source_dir>
+			<web_dir desc="web文件夹名">
+				war
+			</web_dir>
+			<patch_class_dir desc="编译根目录(绝对路径)">
+				C:\Users\SVN\myapp\war\WEB-INF\classes
+			</patch_class_dir>
 		</app>
 	</apps>
 </config>
